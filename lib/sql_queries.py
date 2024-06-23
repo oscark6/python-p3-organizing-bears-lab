@@ -1,18 +1,37 @@
+# 1. Select all female bears and return their names and ages
 select_all_female_bears_return_name_and_age = """
-    Write your SQL query here
+    SELECT
+        name,
+        age
+    FROM bears
+    WHERE sex = 'F';
 """
 
-select_all_bears_names_and_orders_in_alphabetical_order = """
-    Write your SQL query here
+# 2. Select all bears that are alive and return their names and temperaments
+select_alive_bears_return_name_and_temperament = """
+    SELECT
+        name,
+        temperament
+    FROM bears
+    WHERE alive = 1;
 """
 
-select_all_bears_names_and_ages_that_are_alive_and_order_youngest_to_oldest = """
-    Write your SQL query here
+# 3. Select all bears and return their names and colors, ordered by name alphabetically
+select_all_bears_ordered_by_name = """
+    SELECT
+        name,
+        color
+    FROM bears
+    ORDER BY name ASC;
 """
 
-select_oldest_bear_and_returns_name_and_age = """
-    Write your SQL query here
-"""
-select_youngest_bear_and_returns_name_and_age = """
-    Write your SQL query here
+# 4. Select the oldest bear that is alive and return its name and age
+select_oldest_alive_bear_return_name_and_age = """
+    SELECT
+        name,
+        age
+    FROM bears
+    WHERE alive = 1
+    ORDER BY age DESC
+    LIMIT 1;
 """
